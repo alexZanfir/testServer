@@ -4,14 +4,7 @@ var PORT = process.env.PORT || 3000;
 
 
 app.get('/', function (req, res) {
-	res.send(console.log('test begins'),
-console.time('timer');
-setTimeout(function(){
-   console.timeEnd('timer');
-   console.log('first task sent has finished');
-},1000)
-
-console.log('second task sent has finished '););
+	res.send('About Us!');
 });
 
 app.use(express.static(__dirname + '/public'));
@@ -22,5 +15,12 @@ app.listen(PORT, function () {
 
 // test 1
 
+console.log('test begins'),
+console.time('timer');
+setTimeout(function(){
+   console.timeEnd('timer');
+   console.log('first task sent has finished');
+},1000);
 
+console.log('second task sent has finished ');
 
